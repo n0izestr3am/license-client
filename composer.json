@@ -1,0 +1,30 @@
+{
+    "name": "n0izestr3am/license-client",
+    "description": "\"License/Serial for web apllication\"",
+    "type": "package",
+    "license": "MIT",
+    "version": "v1.0",
+    "keywords": ["laravel", "security", "serial", "license", "serial number"],
+    "authors": [
+        {
+            "name": "Irfa A",
+            "email": "irfa.backend@protonmail.com"
+        },
+          {
+           "name": "n0izestr3am",
+           "email": "n0izestr3am@gmail.com",
+            "role": "Developer"
+          }
+    ],
+    "require": {
+        "php": "^7.2|^8.0",
+        "ext-json": "*",
+        "laravel/framework": "^6.0|^8.0",
+         "ixudra/curl": "6.*"
+    },
+    "autoload": {
+            "psr-4": {
+                "n0izestr3am\\AppLicenseClient\\": "src/"
+            }
+    }
+}
