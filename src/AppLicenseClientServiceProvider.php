@@ -13,7 +13,10 @@ class AppLicenseClientServiceProvider extends ServiceProvider
      */
     public function register()
     {
+
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
+
+
     }
 
     /**
@@ -27,8 +30,13 @@ class AppLicenseClientServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__.'/../config/n0izestr3am/' => config_path('n0izestr3am')],'app-license-client');
+
          $this->publishes([
             __DIR__.'/../migrations/' => database_path('migrations'),
+        ], 'app-license-client');
+
+        $this->publishes([
+            __DIR__.'/../seeders/' => database_path('seeders'),
         ], 'app-license-client');
 
         

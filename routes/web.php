@@ -14,6 +14,7 @@ Route::prefix('gtds')->namespace('n0izestr3am\AppLicenseClient\Controller')->mid
      {
 	  Route::get('/client', 'AppLicenseController@getClient')->name('applicensecontroller.client');
 	  Route::get('/check', 'AppLicenseController@check')->name('applicensecontroller.check');
+	  Route::post('/save', 'AppLicenseController@save')->name('applicensecontroller.save');
 
     }
 
