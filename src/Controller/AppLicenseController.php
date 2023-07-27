@@ -41,6 +41,19 @@ class AppLicenseController extends Controller
 
 
 
+public function update(Request $request){
+
+    $clients =  LicenseSerial::find(1);
+    $updatedClient = LicenseSerial::where('id', $clients->id)->update($data);
+     $dataclient =  LicenseSerial::find(1);
+       return response()->json([
+        'success' => true,
+        'message' => 'Clients updated successfully!',
+        'data' =>$dataclient
+    ]);
+
+}
+
 
 
 }
