@@ -17,9 +17,14 @@ class AppLicenseController extends Controller
 
     public function getClient(Request $request)
     {
+          $clients = LicenseSerial::where('id',1)->first();
+            return response()->json([
+                'status' => true,
+                'message' => "Success",
+                'data' => $clients
+            ], 200);
+       //  dd('client');
 
-         dd('client');
-         //return 'jjjjj';
 
     }
 

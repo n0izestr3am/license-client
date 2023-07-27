@@ -16,15 +16,18 @@ class gtdsClientsSeeder extends Seeder
      */
    public function run()
     {
-             $clients = [
+         $host = config('app.url');
+         $name = config('app.name');
+         $kota = [
                    [
                     'id'        => '1',
-                    'name'      => 'Bandung',
-                    'email'      => 'asep@gmail.com'  ,
-
+                    'name'      => $name,
+                    'domain'    => $host,
+                    'email'     => 'asep@gmailssasas.com',
+                    'serial'    => '8d8d8-5566-555-66676',
                     ]
 
                 ];
-        LicenseSerial::insert($clients);
+        LicenseSerial::insert($kota);
     }
 }
