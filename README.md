@@ -2,7 +2,14 @@
 
 This package based on [app-license-client for Laravel](https://github.com/irfaardy/app-license-client) package.
 
- composer require n0izestr3am/license-client
+
+```bash
+   composer require n0izestr3am/license-client
+```
+
+```bash
+  php artisan migrate --path=vendor/n0izestr3am/license-client/migrations
+```
 
 <h2>Laravel Setup </h2>
 
@@ -17,13 +24,18 @@ This package based on [app-license-client for Laravel](https://github.com/irfaar
 
     'aliases' => [
              ....
-            'ALC' => Irfa\AppLicenseClient\Facades\AppLicenseClient::class,
+            'ALC' => n0izestr3am\AppLicenseClient\Facades\AppLicenseClient::class,
     
         ],
 
   <h2>Publish Vendor</h2>
 
-php artisan vendor:publish --tag=app-license-client
+
+```bash
+  php artisan vendor:publish --tag=app-license-client
+```
+
+
 
 <h2>Config File</h2>
 

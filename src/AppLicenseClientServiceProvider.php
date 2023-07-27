@@ -1,11 +1,16 @@
 <?php
 
 namespace n0izestr3am\AppLicenseClient;
-
+use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
-
+use n0izestr3am\AppLicenseClient\Middleware\AppExpiredChecker;
 class AppLicenseClientServiceProvider extends ServiceProvider
 {
+
+
+
+     protected $defer = false;
+
     /**
      * Register services.
      *
@@ -13,9 +18,8 @@ class AppLicenseClientServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
+        $this->publishFiles();
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
-
 
     }
 
@@ -24,21 +28,36 @@ class AppLicenseClientServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(Router $router)
     {
-         \Route::middleware('api')->any(config('n0izestr3am.app_license_client.license_route'),'n0izestr3am\AppLicenseClient\Controller\AppLicenseController@check')->name(config('n0izestr3am.app_license_client.route_name'));
+        $router->middlewareGroup('expired', [AppExpiredChecker::class]);
 
+    }
+
+    protected function publishFiles()
+    {
         $this->publishes([
             __DIR__.'/../config/n0izestr3am/' => config_path('n0izestr3am')],'app-license-client');
 
-         $this->publishes([
-            __DIR__.'/../migrations/' => database_path('migrations'),
-        ], 'app-license-client');
+        //  $this->publishes([
+        //     __DIR__.'/../migrations/' => database_path('migrations'),
+        // ], 'app-license-client');
 
         $this->publishes([
             __DIR__.'/../seeders/' => database_path('seeders'),
         ], 'app-license-client');
 
-        
+       $this->publishes([
+            __DIR__.'/../Views' => base_path('resources/views/vendor/client'),
+        ], 'app-license-client');
+
     }
+
+
+
+
+
+
+
+
 }
