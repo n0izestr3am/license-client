@@ -4,14 +4,23 @@ namespace n0izestr3am\AppLicenseClient\Controller;
 use n0izestr3am\AppLicenseClient\Models\LicenseSerial;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use Carbon\Carbon;
 class AppLicenseController extends Controller
 {
     public function check(Request $request)
     {
 
-         dd('Chek');
-         //return 'jjjjj';
+            $inputDate =  LicenseSerial::where('id', 1)->first();
+            $tgl = Carbon::parse($inputDate->date)->format('Y-m-d');
+            $sekarang = Carbon::today()->format('Y-m-d');
+
+            if ($tgl === $sekarang) {
+                    return "Tampil Notif";
+            }
+
+            return 'oke';
+
+
 
     }
 

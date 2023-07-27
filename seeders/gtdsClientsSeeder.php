@@ -25,6 +25,10 @@ class gtdsClientsSeeder extends Seeder
                     'domain'    => $host,
                     'email'     => 'asep@gmailssasas.com',
                     'serial'    => '8d8d8-5566-555-66676',
+                    'expired'    => now()->addDays(30),
+                     'date'        => Carbon::now(),
+                     'created_at'        => Carbon::now(),
+                     'updated_at'        => Carbon::now(),
                     ]
 
                 ];

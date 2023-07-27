@@ -8,7 +8,6 @@ class AppLicenseClientServiceProvider extends ServiceProvider
 {
 
 
-
      protected $defer = false;
 
     /**

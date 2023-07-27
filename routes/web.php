@@ -10,8 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
 Route::prefix('gtds')->namespace('n0izestr3am\AppLicenseClient\Controller')
-      ->middleware('web','expired')->group(function()
+      ->middleware('web')->group(function()
      {
 	  Route::get('/client', 'AppLicenseController@getClient')->name('applicensecontroller.client');
 	  Route::get('/check', 'AppLicenseController@check')->name('applicensecontroller.check');

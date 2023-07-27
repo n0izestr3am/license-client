@@ -35,36 +35,19 @@ This package based on [app-license-client for Laravel](https://github.com/irfaar
   php artisan vendor:publish --tag=app-license-client
 ```
 
-
-
 <h2>Config File</h2>
 
     config/n0izestr3am/app-license-client.php
 
-<h2>Plugin Settings</h2>
-
-Tambahkan baris ini di file .env<br>
-Add this line to file .env
+<h2>Implementasi Middleware di route</h2>
 
 ```php
-APP_SERIAL_NUMBER=XXXX-XXXX-XXXX-XXXX
-APP_LICENSE_ENDPOINT=https://example.com/check/license
+Route::middleware('expired')->get('/example','TestController@index');
 ```
 
-<h2>Setting Middleware</h2>
-
-Buka file App\Http\Kernel.php<br>
-Open file App\Http\Kernel.php<br>
-Tambahkan item ini di $routeMiddleware <br>
-Add this item in $routeMiddleware
-
+<h2>Implementasi notif  Dashboard</h2>
 ```php
-'licenseCheck' => \n0izestr3am\AppLicenseClient\Middleware\AppLicenseChecker::class,
+ @include('vendor.client.notif')
 ```
 
-<h2>Implementasi di route</h2>
-
-```php
-Route::middleware('licenseCheck')->get('/example','TestController@index');
-```
 
