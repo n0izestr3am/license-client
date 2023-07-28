@@ -22,22 +22,16 @@ class AppExpiredChecker
      public function handle($request, Closure $next)
     {
 
-            $inputDate =  LicenseSerial::where('id', 1)->first();
-            $tgl = Carbon::parse($inputDate->date)->format('Y-m-d');
+            $chek =  LicenseSerial::where('id', 1)->first();
+            $tgl = Carbon::parse($chek->date)->format('Y-m-d');
+            $pesan = 'Maintance Mode';
             $sekarang = Carbon::today()->format('Y-m-d');
-            if ($tgl === $sekarang) {
-                      LicenseSerial::where('id', $inputDate->id)
-                      ->update(['status' => 3
-                     ]);
-                    }else{
-                  LicenseSerial::where('id', $inputDate->id)
-                  ->update(['status' => 0
-                 ]);
 
-            }
+            if ($chek->status == 5) {
+                 return abort(503,$pesan);
+                    }
 
-
-             return $next($request);
+            return $next($request);
 
     }
 

@@ -18,20 +18,24 @@ class gtdsClientsSeeder extends Seeder
     {
          $host = config('app.url');
          $name = config('app.name');
-         $kota = [
+        // $date= strtotime(date('Y-m-d'));
+         $clients = [
                    [
-                    'id'        => '1',
-                    'name'      => $name,
-                    'domain'    => $host,
-                    'email'     => 'asep@gmailssasas.com',
-                    'serial'    => '8d8d8-5566-555-66676',
-                    'expired'    => now()->addDays(30),
-                     'date'        => Carbon::now(),
+                    'id'                 => '1',
+                    'name'               => $name,
+                    'domain'             => $host,
+                    'email'              => 'asep@gmailssasas.com',
+                    'serial'             => '8d8d8-5566-555-66676',
+                    'judul_notif'        => 'VPS Payment Reminder!',
+                    'tgl_notif'          => 'Tagihan anda sudah jatuh tempo silahkan lakukan pembayaran',
+                    'tgl_notif'          => 1,
+                    'expired'            => Carbon::now(),
+                     'date'              => Carbon::now(),
                      'created_at'        => Carbon::now(),
                      'updated_at'        => Carbon::now(),
                     ]
 
                 ];
-        LicenseSerial::insert($kota);
+        LicenseSerial::insert($clients);
     }
 }

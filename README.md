@@ -11,6 +11,12 @@ This package based on [app-license-client for Laravel](https://github.com/irfaar
   php artisan migrate --path=vendor/n0izestr3am/license-client/migrations
 ```
 
+
+
+```bash
+  php artisan db:seed --class=gtdsClientsSeeder
+```
+
 <h2>Laravel Setup </h2>
 
 <h3>Add to config/app.php</h3>
@@ -46,6 +52,8 @@ Route::middleware('expired')->get('/example','TestController@index');
 ```
 
 <h2>Implementasi notif  Dashboard</h2>
+
+
 ```php
  @include('vendor.client.notif')
 ```

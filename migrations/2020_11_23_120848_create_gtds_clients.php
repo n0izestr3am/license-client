@@ -20,6 +20,8 @@ class CreateGtdsClients extends Migration
             $table->string('domain',120);
             $table->string('phone_number',30)->nullable();
             $table->text('address')->nullable();
+            $table->string('judul_notif')->nullable();
+            $table->integer('tgl_notif')->default(1);
             $table->text('notif')->nullable();
             $table->decimal('price', 8, 2)->nullable();
             $table->string('serial',120)->unique();
