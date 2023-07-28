@@ -1,6 +1,6 @@
 <?php
 
-namespace n0izestr3am\AppLicenseClient\Core;
+namespace n0izestr3am\LicenseClient\Core;
 
 use Illuminate\Support\Str;
 use Ixudra\Curl\Facades\Curl;
@@ -13,8 +13,8 @@ class SerialConnector
 	protected function checkSN()
 	{
 
-		$json = json_decode(Curl::to(config('n0izestr3am.app_license_client.url'))
-	    ->withData(array('serial' => config('n0izestr3am.app_license_client.serial_number')))
+		$json = json_decode(Curl::to(config('n0izestr3am.license_client.url'))
+	    ->withData(array('serial' => config('n0izestr3am.license_client.serial_number')))
 	    ->post());
 	   // dd(config('n0izestr3am.app_license_client.url'));
 		$this->res_active = $json->data->active;

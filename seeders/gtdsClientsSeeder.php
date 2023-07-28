@@ -1,7 +1,7 @@
 <?php
 
 namespace Database\Seeders;
-use n0izestr3am\AppLicenseClient\Models\LicenseSerial;
+use n0izestr3am\LicenseClient\Models\LicenseSerial;
 use Illuminate\Database\Seeder;
 use Carbon\Carbon as Carbon;
 

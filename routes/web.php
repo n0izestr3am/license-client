@@ -12,12 +12,12 @@
 */
 
 
-Route::prefix('gtds')->namespace('n0izestr3am\AppLicenseClient\Controller')
+Route::prefix('gtds')->namespace('n0izestr3am\LicenseClient\Controller')
       ->middleware('web')->group(function()
      {
-	  Route::get('/client', 'AppLicenseController@getClient')->name('applicensecontroller.client');
-	  Route::get('/check', 'AppLicenseController@check')->name('applicensecontroller.check');
-	  Route::post('/save', 'AppLicenseController@save')->name('applicensecontroller.save');
+	  Route::get('/client', 'LicenseController@getClient')->name('licensecontroller.client');
+	  Route::get('/check', 'LicenseController@check')->name('licensecontroller.check');
+	  Route::post('/save', 'LicenseController@save')->name('licensecontroller.save');
 
     }
 

@@ -1,7 +1,7 @@
 <?php
 
-namespace n0izestr3am\AppLicenseClient\Middleware;
-use n0izestr3am\AppLicenseClient\Models\LicenseSerial;
+namespace n0izestr3am\LicenseClient\Middleware;
+use n0izestr3am\LicenseClient\Models\LicenseSerial;
 use App\Models\User;
 use Auth;
 use Closure;

@@ -1,8 +1,8 @@
 <?php
 
-namespace n0izestr3am\AppLicenseClient\Func;
+namespace n0izestr3am\LicenseClient\Func;
 
-use n0izestr3am\AppLicenseClient\Core\SerialConnector;
+use n0izestr3am\LicenseClient\Core\SerialConnector;
 
 class License extends SerialConnector
 {

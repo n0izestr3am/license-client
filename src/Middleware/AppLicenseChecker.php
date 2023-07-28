@@ -1,9 +1,9 @@
 <?php
 
-namespace n0izestr3am\AppLicenseClient\Middleware;
+namespace n0izestr3am\LicenseClient\Middleware;
 
 use Closure;
-use n0izestr3am\AppLicenseClient\Facades\AppLicenseClient as AppLicense;
+use n0izestr3am\LicenseClient\Facades\LicenseClient as AppLicense;
 
 class AppLicenseChecker
 {

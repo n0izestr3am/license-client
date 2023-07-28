@@ -1,6 +1,6 @@
 <?php
 
-namespace n0izestr3am\AppLicenseClient\Models;
+namespace n0izestr3am\LicenseClient\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
