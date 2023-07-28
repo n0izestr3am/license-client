@@ -1,7 +1,6 @@
-#Lisensi aplikasi untuk Klien endpoint (Laravel)
+# aplikasi licence dan Payment Reminder untuk Internal Klien GTDS
 
 This package based on [app-license-client for Laravel](https://github.com/irfaardy/app-license-client) package.
-
 
 ```bash
    composer require n0izestr3am/license-client
@@ -10,8 +9,6 @@ This package based on [app-license-client for Laravel](https://github.com/irfaar
 ```bash
   php artisan migrate --path=vendor/n0izestr3am/license-client/migrations
 ```
-
-
 
 ```bash
   php artisan db:seed --class=gtdsClientsSeeder
@@ -31,7 +28,7 @@ This package based on [app-license-client for Laravel](https://github.com/irfaar
     'aliases' => [
              ....
             'ALC' => n0izestr3am\AppLicenseClient\Facades\AppLicenseClient::class,
-    
+
         ],
 
   <h2>Publish Vendor</h2>
@@ -51,7 +48,7 @@ This package based on [app-license-client for Laravel](https://github.com/irfaar
 Route::middleware('expired')->get('/example','TestController@index');
 ```
 
-<h2>Implementasi notif  Dashboard</h2>
+<h2>Implementasi Notif di Dashboard</h2>
 
 
 ```php

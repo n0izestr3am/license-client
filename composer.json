@@ -1,6 +1,6 @@
 {
     "name": "n0izestr3am/license-client",
-    "description": "\"License/Serial for web apllication\"",
+    "description": "\"License/Serial for Laravel web apllication\"",
     "type": "package",
     "license": "MIT",
     "version": "v1.0",
