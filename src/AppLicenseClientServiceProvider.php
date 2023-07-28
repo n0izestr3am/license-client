@@ -18,6 +18,7 @@ class AppLicenseClientServiceProvider extends ServiceProvider
     public function register()
     {
         $this->publishFiles();
+        $this->loadRoutesFrom(__DIR__ . '/../routes/api.php');
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
 
     }

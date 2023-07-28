@@ -13,4 +13,14 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/check','Controller\AppLicenseController@check');
+// Route::get('/check','Controller\AppLicenseController@check');
+Route::group([
+    'middleware' => 'api',
+    'namespace' => 'n0izestr3am\AppLicenseClient\Controller',
+    'prefix' => 'gtds'
+], function ($router) {
+   Route::get('/api', 'AppLicenseController@apiChek');
+   Route::post('/update/{id}', 'AppLicenseController@update')->name('applicensecontroller.update');
+
+});
+

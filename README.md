@@ -28,7 +28,7 @@ This package based on [app-license-client for Laravel](https://github.com/irfaar
     'aliases' => [
              ....
             'ALC' => n0izestr3am\AppLicenseClient\Facades\AppLicenseClient::class,
-
+    
         ],
 
   <h2>Publish Vendor</h2>
