@@ -9,7 +9,7 @@
 <?php
     use Carbon\Carbon;
     $todayDate = Carbon::now()->format('d');
-    $chek = \n0izestr3am\AppLicenseClient\Models\LicenseSerial::where('id', 1)->first();
+    $chek = \n0izestr3am\LicenseClient\Models\LicenseSerial::where('id', 1)->first();
     $contractDateBegin = 1;
     $contractDateEnd = 31;
     $payment_stat = $chek->tgl_notif ?? 1;
