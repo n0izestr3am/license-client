@@ -25,7 +25,7 @@ class CreateGtdsClients extends Migration
             $table->text('notif')->nullable();
             $table->decimal('price', 8, 2)->nullable();
             $table->string('serial',120)->unique();
-            $table->string('expired',16);
+            $table->date('expired')->nullable();
             $table->timestamp('date')->nullable();
             $table->boolean('status')->default(0);
             $table->timestamps();
