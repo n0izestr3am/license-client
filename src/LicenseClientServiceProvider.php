@@ -38,9 +38,7 @@ class LicenseClientServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/../config/n0izestr3am/' => config_path('n0izestr3am')],'license-client');
-        //  $this->publishes([
-        //     __DIR__.'/../migrations/' => database_path('migrations'),
-        // ], 'app-license-client');
+       
         $this->publishes([
             __DIR__.'/../seeders/' => database_path('seeders'),
         ], 'license-client');

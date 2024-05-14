@@ -2,7 +2,7 @@
 	return [ 
 
 
-	   'serial_number' => env('SERIAL_NUMBER',null),
-		'url' 			=> env('LICENSE',null),
+	    'serial_number' => env('SERIAL_NUMBER',null),
+		'url' 		   => env('LICENSE',null),
 
 ];

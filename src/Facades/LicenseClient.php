@@ -4,7 +4,7 @@ namespace n0izestr3am\LicenseClient\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class AppLicenseClient extends Facade
+class LicenseClient extends Facade
 {
     /**
      * Get the registered name of the component.
